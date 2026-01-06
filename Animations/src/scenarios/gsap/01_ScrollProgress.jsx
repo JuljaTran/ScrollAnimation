@@ -27,7 +27,7 @@ export default function ScrollProgressGSAP() {
     })
 
     return (
-        <div className="progress-wrapper">
+        <div className="progress-container">
             <div className="progress-bar" ref={progressRef} />
             <h1>GSAP Testing</h1>
         </div>

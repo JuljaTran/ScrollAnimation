@@ -1,0 +1,47 @@
+.parallax-container {
+    height: 300vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.layer {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    will-change: transform;
+}
+
+.layer-back {
+    background: #F8B500;
+    animation: parallaxBack linear;
+    animation-timeline: scroll();
+}
+
+.layer-middle {
+    background: lightyellow;
+    animation: parallaxMid linear;
+    animation-timeline: scroll();
+}
+
+.layer-front {
+    background: #00ADB5;
+    animation: parallaxFront linear;
+    animation-timeline: scroll();
+}
+
+@keyframes parallaxBack {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+}
+
+@keyframes parallaxMid {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+@keyframes parallaxFront {
+    from { transform: translateY(0); }
+    to { transform: translateY(-300px); }
+}
