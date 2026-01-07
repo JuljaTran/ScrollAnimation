@@ -1,0 +1,82 @@
+.complex-container {
+  height: 500vh;
+  position: relative;
+}
+
+.box {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.8);
+  opacity: 0;
+  font-size: 3rem;
+  will-change: transform, opacity;
+  animation-timing-function: linear;
+}
+
+.box-one {
+  width: 50vh;
+  animation: complexOne;
+  background: #F8B500;
+  animation-timeline: scroll();  
+}
+
+
+.box-two {
+  width: 50vh;
+  animation: complexTwo; 
+  background: lightblue;
+  animation-timeline: scroll();  
+}
+
+.box-three {
+  width: 50vh;
+  animation: complexThree;
+  background: #00ADB5;
+  animation-timeline: scroll();  
+}
+
+@keyframes complexOne {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  40% {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(0.8);
+  }  
+}
+
+@keyframes complexTwo {
+  30% {
+    opacity: 0;
+    transform: translate(-50%, 50px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  70% {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(0.8);
+  }  
+}
+
+@keyframes complexThree {
+  60% {
+    opacity: 0;
+    transform: translate(-50%, 50px) scale(0.8);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(0.8);
+  }  
+}

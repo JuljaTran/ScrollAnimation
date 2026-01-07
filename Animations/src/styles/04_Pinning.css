@@ -1,0 +1,17 @@
+.pin-container {
+  height: 300vh;
+}
+
+.pin-element {
+  position: sticky;
+  top: 20%;
+  font-size: 3rem;
+  background: #00ADB5;
+  padding: 1rem;
+  will-change: transform;
+}
+
+.content {
+  margin-top: 100vh;
+  font-size: 1.5rem;
+}

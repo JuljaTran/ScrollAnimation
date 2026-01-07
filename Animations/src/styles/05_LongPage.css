@@ -1,0 +1,35 @@
+.longpage-container {
+    height: 300vh;
+    padding-top: 100px;
+}
+
+.item {
+    margin: 150px auto;
+    width: 200px;
+    height: 100px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    will-change: transform, opacity;
+    animation-name: fadeMove;
+    animation-timeline: scroll();
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes fadeMove {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
