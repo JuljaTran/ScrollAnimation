@@ -1,4 +1,7 @@
 .longpage-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 300vh;
     padding-top: 100px;
 }

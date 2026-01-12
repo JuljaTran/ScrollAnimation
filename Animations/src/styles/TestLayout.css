@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.site-header {
+    width: 100%;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 10;
+}
+
+.hero {
+    height: 100vh;
+    padding: 80px 24px;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    min-height: 200vh;
+}
+
+.footer {
+    height: 60vh;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

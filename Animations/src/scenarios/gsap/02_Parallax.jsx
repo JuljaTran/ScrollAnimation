@@ -52,11 +52,13 @@ export default function ParallaxGSAP() {
     })
 
     return (
-        <div className="parallax-container">
-            <h1>CSS Parallax Testing</h1>
-            <div className="layer layer-back" ref={backRef}>Back</div>
-            <div className="layer layer-middle" ref={middleRef}>Middle</div>
-            <div className="layer layer-front" ref={frontRef}>Front</div>
+        <div>
+            <div className="parallax-container">
+                <h1>GSAP Parallax Testing</h1>
+                <div className="layer layer-back" ref={backRef}>Back</div>
+                <div className="layer layer-middle" ref={middleRef}>Middle</div>
+                <div className="layer layer-front" ref={frontRef}>Front</div>
+            </div>
         </div>
     );
 }

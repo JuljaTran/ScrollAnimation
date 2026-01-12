@@ -25,6 +25,7 @@ export default function PinningGSAP() {
 
     return (
         <div className="pin-container" ref={containerRef}>
+            <h1>GSAP Pinning Testing</h1>
             <div className="pin-element" ref={pinRef}>Pinned</div>
             <div className="content">
                 <p>Filler Content</p>

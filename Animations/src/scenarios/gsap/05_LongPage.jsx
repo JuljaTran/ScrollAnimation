@@ -33,19 +33,17 @@ export default function LongPageGSAP() {
     }, []);
 
     return (
-        <div>
+        <div className="longpage-container">
             <h1>GSAP Long page</h1>
-            <div className="longpage-container">
-                {Array.from({ length: 30 }).map((_, index) => (
-                    <div
-                        className="item"
-                        key={index}
-                        ref={el => itemsRef.current[index] = el}
-                    >
-                        Item {index + 1}
-                    </div>
-                ))}
-            </div>
+            {Array.from({ length: 30 }).map((_, index) => (
+                <div
+                    className="item"
+                    key={index}
+                    ref={el => itemsRef.current[index] = el}
+                >
+                    Item {index + 1}
+                 </div>
+            ))}
         </div>
     );
 }
