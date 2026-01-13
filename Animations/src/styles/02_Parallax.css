@@ -1,57 +1,53 @@
-.parallax-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 300vh;
-    width: 100%;
+.parallax-section {
+  position: relative;
+  height: 300vh;
+  overflow: hidden;
 }
 
-.layer {
-    position: fixed;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    will-change: transform;
-}
-.layer-back {
-    background: #F8B500;
-    z-index: 1;
-    animation: parallaxBack linear;
-    animation-timeline: scroll();
+.parallax-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 }
 
-.layer-middle {
-    background: lightyellow;
-    z-index: 2;
-    animation: parallaxMid linear;
-    animation-timeline: scroll();
+.parallax-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+
+  animation: bgParallax linear;
+  animation-timeline: scroll();
 }
 
-.layer-front {
-    background: #00ADB5;
-    z-index: 3;
-    animation: parallaxFront linear;
-    animation-timeline: scroll();
+.parallax-content {
+  position: relative;
+  margin-top: 120vh;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+
+  will-change: transform;
+  animation: textParallax linear;
+  animation-timeline: scroll();
 }
 
-@keyframes parallaxBack {
-    from { transform: translate(-50%, -50%) translateY(0); }
-    to { transform: translate(-50%, -50%) translateY(-120px); }
+@keyframes bgParallax {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200px);
+  }
 }
 
-@keyframes parallaxMid {
-    from { transform: translate(-50%, -50%) translateY(0); }
-    to { transform: translate(-50%, -50%) translateY(-240px); }
-}
-
-@keyframes parallaxFront {
-    from { transform: translate(-50%, -50%) translateY(0); }
-    to { transform: translate(-50%, -50%) translateY(-360px); }
+@keyframes textParallax {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
 }

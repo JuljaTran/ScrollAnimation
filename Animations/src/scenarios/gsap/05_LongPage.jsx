@@ -31,7 +31,7 @@ export default function LongPageGSAP() {
 
     return (
         <div className="longpage">
-            <h1>GSAP Long Page Scenario</h1>
+            <h1>GSAP Long Page</h1>
 
             {Array.from({ length: 30 }).map((_, index) => (
                 <section

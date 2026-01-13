@@ -5,15 +5,23 @@
 
 .pin-layout {
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   gap: 4rem;
+  align-items: flex-start;
 }
 
 .pin-visual {
+  flex: 0 0 55%;
+}
+
+.css-pinning .pin-visual {
   position: sticky;
-  top: 20vh;
-  align-self: flex-start;
+  top: 10vh;
+}
+
+.gsap-pinning .pin-visual {
+  position: relative;
 }
 
 .pin-visual img {
@@ -29,9 +37,4 @@
 .step {
   min-height: 100vh;
   padding: 4rem 0;
-}
-
-.step h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }

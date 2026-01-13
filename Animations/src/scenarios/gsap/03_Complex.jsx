@@ -59,7 +59,7 @@ export default function ComplexGSAP() {
 
   return (
     <div className="complex-container" ref={containerRef}>
-      <h1>GSAP Complex Scenario</h1>
+      <h1>GSAP Complex</h1>
 
       <section className="panel panel-one" ref={panelOneRef}>
         <div className="panel-text">Feature One</div>

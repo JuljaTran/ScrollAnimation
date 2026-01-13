@@ -1,7 +1,8 @@
-import "../../styles/02_Parallax.css"
+import "../../styles/02_Parallax.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import testImage1 from "../../images/Street.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function ParallaxGSAP() {
@@ -52,12 +53,18 @@ export default function ParallaxGSAP() {
     })
 
     return (
-        <div>
-            <div className="parallax-container">
-                <h1>GSAP Parallax Testing</h1>
-                <div className="layer layer-back" ref={backRef}>Back</div>
-                <div className="layer layer-middle" ref={middleRef}>Middle</div>
-                <div className="layer layer-front" ref={frontRef}>Front</div>
+        <div className="parallax-section">
+            <h1>GSAP Parallax</h1>
+            <div className="parallax-background">
+                <img src={testImage1} alt="Background visual" />
+            </div>
+
+            <div className="parallax-content">
+                <h1>Parallax Headline</h1>
+                <p>
+                    Beispieltext für eine typische Hero oder Storytelling Sektion,
+                    bei der sich Bild und Text unterschiedlich zur Scrollposition bewegen.
+                </p>
             </div>
         </div>
     );

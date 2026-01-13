@@ -6,7 +6,7 @@ import testImage3 from "../../images/StreetFood02.jpg"
 export default function ComplexCSS() {
     return (
         <div className="complex-container">
-            <h1>CSS Complex Scenario</h1>
+            <h1>CSS Complex</h1>
             <section className="panel panel-one">
                 <div className="panel-text">Feature One</div> 
                 <div className="panel-media">

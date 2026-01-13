@@ -3,13 +3,12 @@ import testImage1 from "../../images/Street.jpg"
 
 export default function PinningCSS() {
     return (
-        <div className="pin-section">
-            <h1>CSS Pinning Example</h1>
+        <div className="pin-section css-pinning">
+            <h1>CSS Pinning</h1>
             <div className="pin-layout">
                 <div className="pin-visual">
                     <img src={testImage1} alt="Feature visual" />
                 </div>
-
                 <div className="pin-content">
                     <section className="step">
                         <h2>Text One</h2>
