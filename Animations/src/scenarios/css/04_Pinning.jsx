@@ -1,15 +1,29 @@
 import "../../styles/04_Pinning.css"
+import testImage1 from "../../images/Street.jpg"
+
 export default function PinningCSS() {
     return (
-        <div className="pin-container">
-            <h1>CSS Pinning </h1>
-            <div className="pin-element">Pinned</div>
-            <div className="content">
-                <p>Filler Content</p>
-                <p>Filler Content</p>
-                <p>Filler Content</p>
-                <p>Filler Content</p>
-                <p>Filler Content</p>
+        <div className="pin-section">
+            <h1>CSS Pinning Example</h1>
+            <div className="pin-layout">
+                <div className="pin-visual">
+                    <img src={testImage1} alt="Feature visual" />
+                </div>
+
+                <div className="pin-content">
+                    <section className="step">
+                        <h2>Text One</h2>
+                        <p>Kurze Beschreibung</p>
+                    </section>
+                    <section className="step">
+                        <h2>Text Two</h2>
+                        <p>Kurze Beschreibung</p>
+                    </section>
+                    <section className="step">
+                        <h2>Text Three</h2>
+                        <p>Kurze Beschreibung</p>
+                    </section>
+                </div>
             </div>
         </div>
     );

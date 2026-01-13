@@ -17,3 +17,6 @@ Images:
 
     Street
     https://unsplash.com/photos/street-view-with-buildings-and-vehicles-on-a-sunny-day-OgIkrgsss-w
+
+Pinning
+    Css pinning so gar nicht möglich aber mit "position: sticky" nachahmbar -> wird so visuell gleich dargestellt wie pinning 

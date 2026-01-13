@@ -1,48 +1,47 @@
-import "../../styles/05_LongPage.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../../styles/05_LongPage.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LongPageGSAP() {
-    const itemsRef = useRef([]);
+    const sectionsRef = useRef([]);
 
     useEffect(() => {
-        itemsRef.current.forEach((item, index) => {
+        sectionsRef.current.forEach(section => {
             gsap.fromTo(
-                item,
-                { opacity: 0, y: 50 },
+                section,
+                { opacity: 0, y: 60 },
                 {
                     opacity: 1,
                     y: 0,
-                    ease: "none",
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 90%",   
-                        end: "top 10%",     
+                        trigger: section,
+                        start: "top 80%",
+                        end: "top 50%",
                         scrub: true
                     }
                 }
             );
         });
 
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
+        return () => ScrollTrigger.getAll().forEach(t => t.kill());
     }, []);
 
     return (
-        <div className="longpage-container">
-            <h1>GSAP Long page</h1>
+        <div className="longpage">
+            <h1>GSAP Long Page Scenario</h1>
+
             {Array.from({ length: 30 }).map((_, index) => (
-                <div
-                    className="item"
+                <section
+                    className="long-section"
                     key={index}
-                    ref={el => itemsRef.current[index] = el}
+                    ref={el => sectionsRef.current[index] = el}
                 >
-                    Item {index + 1}
-                 </div>
+                    <h2>Section {index + 1}</h2>
+                    <p>Beispielinhalt für eine lange Scrollseite.</p>
+                </section>
             ))}
         </div>
     );

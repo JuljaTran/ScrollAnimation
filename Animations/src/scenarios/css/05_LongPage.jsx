@@ -6,9 +6,10 @@ export default function LongPageCSS() {
             <div className="longpage-container">
                 <h1>CSS Long page</h1>
                 {Array.from({ length: 30 }).map((_, index) => (
-                    <div className="item" key={index}>
-                        Item {index + 1}
-                    </div>
+                    <section className="long-section" key={index}>
+                        <h2>Section {index + 1}</h2>
+                        <p>Beispielinhalt für eine lange Scrollseite.</p>
+                    </section>
                 ))}
             </div>
         </div>
