@@ -1,0 +1,33 @@
+.pin-section {
+  min-height: 300vh;
+  padding: 10vh 0;
+}
+
+.pin-layout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.pin-visual {
+  flex: 0 0 55%;
+  position: sticky;
+  top: 10vh;
+}
+
+.pin-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pin-content {
+  flex: 1;
+}
+
+.step {
+  min-height: 100vh;
+  padding: 4rem 0;
+}

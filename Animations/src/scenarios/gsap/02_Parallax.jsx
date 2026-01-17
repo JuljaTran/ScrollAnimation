@@ -1,4 +1,4 @@
-import "../../styles/02_Parallax.css";
+import "./02_Parallax.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";

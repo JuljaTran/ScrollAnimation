@@ -1,9 +1,9 @@
-import "../../styles/04_Pinning.css"
+import "./04_Pinning.css"
 import testImage1 from "../../images/Street.jpg"
 
 export default function PinningCSS() {
     return (
-        <div className="pin-section css-pinning">
+        <div className="pin-section">
             <h1>CSS Pinning</h1>
             <div className="pin-layout">
                 <div className="pin-visual">

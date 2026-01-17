@@ -1,4 +1,4 @@
-import "../../styles/02_Parallax.css"
+import "./02_Parallax.css"
 import testImage1 from "../../images/Street.jpg";
 
 export default function ParallaxCSS() {

@@ -1,4 +1,4 @@
-import "../../styles/03_Complex.css"
+import "./03_Complex.css"
 import testImage1 from "../../images/Street.jpg"
 import testImage2 from "../../images/StreetFood01.jpg"
 import testImage3 from "../../images/StreetFood02.jpg"

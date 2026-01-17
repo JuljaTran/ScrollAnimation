@@ -1,4 +1,4 @@
-import "../../styles/05_LongPage.css";
+import "./05_LongPage.css";
 
 export default function LongPageCSS() {
     return (

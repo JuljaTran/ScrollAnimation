@@ -1,4 +1,4 @@
-import "../../styles/03_Complex.css"
+import "./03_Complex.css"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -16,45 +16,39 @@ export default function ComplexGSAP() {
 
   useEffect(() => {
     const panels = [
-      panelOneRef.current,
-      panelTwoRef.current,
-      panelThreeRef.current
+      { ref: panelOneRef, start: "top top", end: "50% top" },
+      { ref: panelTwoRef, start: "50% top", end: "100% top" },
+      { ref: panelThreeRef, start: "100% top", end: "150% top" },
     ];
 
-    gsap.set(panels, {
-      opacity: 0,
-      y: 80,
-      scale: 0.95
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-      }
-    });
-
-    panels.forEach((panel) => {
-      tl.to(panel, {
+    panels.forEach((panel, i) => {
+      gsap.to(panel, {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 1
-      })
-      .to(panel, {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: `${i * 100}vh top`,
+          end: `${i * 100 + 100}vh top`,
+          scrub: true
+        }
+      });
+      gsap.to(panel, {
         opacity: 0,
         y: -80,
         scale: 0.95,
-        duration: 1
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: `${i * 100 + 50}vh top`,
+          end: `${i * 100 + 150}vh top`,
+          scrub: true
+        }
       });
     });
 
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
+
+    // Cleanup
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   return (

@@ -1,4 +1,4 @@
-import "../../styles/01_ScrollProgress.css"
+import "./01_ScrollProgress.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -24,7 +24,7 @@ export default function ScrollProgressGSAP() {
             animation.scrollTrigger?.kill();
             animation.kill();
         }
-    })
+    }, []);
 
     return (
         <div className="progress-container">

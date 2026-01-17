@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../../styles/05_LongPage.css";
+import "./05_LongPage.css";
 
 gsap.registerPlugin(ScrollTrigger);
 

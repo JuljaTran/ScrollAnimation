@@ -1,4 +1,4 @@
-import "../../styles/01_ScrollProgress.css"
+import "./01_ScrollProgress.css"
 export default function ScrollProgressCSS() {
     return (
         <div className="progress-container">

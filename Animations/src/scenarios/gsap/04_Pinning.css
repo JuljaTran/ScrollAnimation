@@ -13,14 +13,6 @@
 
 .pin-visual {
   flex: 0 0 55%;
-}
-
-.css-pinning .pin-visual {
-  position: sticky;
-  top: 10vh;
-}
-
-.gsap-pinning .pin-visual {
   position: relative;
 }
 

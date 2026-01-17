@@ -1,4 +1,4 @@
-import "../../styles/04_Pinning.css"
+import "./04_Pinning.css"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -24,7 +24,7 @@ export default function PinningGSAP() {
     }, []);
 
     return (
-        <div className="pin-section gsap-pinning" ref={sectionRef}>
+        <div className="pin-section" ref={sectionRef}>
             <h1>GSAP Pinning</h1>
             <div className="pin-layout">
                 <div className="pin-visual" ref={visualRef}>
