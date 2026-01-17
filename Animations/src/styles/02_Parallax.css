@@ -14,7 +14,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  will-change: transform;
 
   animation: bgParallax linear;
   animation-timeline: scroll();
@@ -29,7 +28,6 @@
   text-align: center;
   color: white;
 
-  will-change: transform;
   animation: textParallax linear;
   animation-timeline: scroll();
 }

@@ -22,14 +22,14 @@ function App() {
         {/*method === 'CSS' && <ScrollProgressCSS />}
         {method === 'GSAP' && <ScrollProgressGSAP />*/}
         
-        {/*method === 'CSS' && <ParallaxCSS />}
-        {method === 'GSAP' && <ParallaxGSAP />*/}
+        {method === 'CSS' && <ParallaxCSS />}
+        {method === 'GSAP' && <ParallaxGSAP />}
 
         {/*method === 'CSS' && <ComplexCSS />}
         {method === 'GSAP' && <ComplexGSAP />*/}
 
-        {method === 'CSS' && <PinningCSS />}
-        {method === 'GSAP' && <PinningGSAP />}
+        {/*method === 'CSS' && <PinningCSS />}
+        {method === 'GSAP' && <PinningGSAP />*/}
 
         {/*method === 'CSS' && <LongPageCSS />}
         {method === 'GSAP' && <LongPageGSAP />*/}
