@@ -1,4 +1,5 @@
 .pin-section {
+  overflow: visible;
   min-height: 300vh;
   padding: 10vh 0;
 }
