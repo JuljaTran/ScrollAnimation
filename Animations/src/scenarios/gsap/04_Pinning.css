@@ -1,32 +1,38 @@
 .pin-section {
-  min-height: 300vh;
-  padding: 10vh 0;
+  width: 100%;
 }
 
 .pin-layout {
   display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 4rem;
-  align-items: flex-start;
-}
-
-.pin-visual {
-  flex: 0 0 55%;
-  position: relative;
-}
-
-.pin-visual img {
+  flex-direction: row;
   width: 100%;
+  overflow: hidden; 
+}
+
+.pin-visual-container {
+  width: 50%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-visual-container img {
+  max-width: 90%;
   height: auto;
+  border-radius: 6px;
   display: block;
 }
 
 .pin-content {
-  flex: 1;
+  width: 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .step {
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
 }

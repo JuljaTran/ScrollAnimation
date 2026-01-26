@@ -1,34 +1,36 @@
 .pin-section {
-  overflow: visible;
-  min-height: 300vh;
-  padding: 10vh 0;
+  width: 100%;
 }
 
 .pin-layout {
   display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 4rem;
+  width: 100%;
   align-items: flex-start;
 }
 
 .pin-visual {
-  flex: 0 0 55%;
+  width: 50%;
   position: sticky;
-  top: 10vh;
+  top: 0; 
+  align-self: flex-start;
+  padding: 1rem;
 }
 
 .pin-visual img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 .pin-content {
-  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .step {
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
 }

@@ -1,33 +1,32 @@
-import "./04_Pinning.css"
+import "./04_Pinning.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import testImage1 from "../../images/Street.jpg"
+import testImage1 from "../../images/Street.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PinningGSAP() {
     const sectionRef = useRef(null);
-    const visualRef = useRef(null);
+    const visualContainerRef = useRef(null);
 
     useEffect(() => {
-        ScrollTrigger.create({
+        const trigger = ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
             end: "bottom bottom",
-            pin: visualRef.current,
+            pin: visualContainerRef.current,
             pinSpacing: true,
             scrub: true
         });
 
-        return () => ScrollTrigger.getAll().forEach(t => t.kill());
+        return () => trigger.kill();
     }, []);
 
     return (
         <div className="pin-section" ref={sectionRef}>
-            <h1>GSAP Pinning</h1>
             <div className="pin-layout">
-                <div className="pin-visual" ref={visualRef}>
+                <div className="pin-visual-container" ref={visualContainerRef}>
                     <img src={testImage1} alt="Feature visual" />
                 </div>
 
@@ -49,4 +48,3 @@ export default function PinningGSAP() {
         </div>
     );
 }
-
