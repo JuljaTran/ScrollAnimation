@@ -7,7 +7,6 @@ import testImage1 from "../../images/Street.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ParallaxGSAP() {
-  const sectionRef = useRef(null);
   const backRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -17,7 +16,7 @@ export default function ParallaxGSAP() {
         y: -100,
         ease: "none",
         scrollTrigger: {
-          trigger: sectionRef.current,
+          trigger: ".parallax-section",
           start: "top top",
           end: "bottom bottom",
           scrub: true
@@ -28,19 +27,19 @@ export default function ParallaxGSAP() {
         y: -300,
         ease: "none",
         scrollTrigger: {
-          trigger: sectionRef.current,
+          trigger: ".parallax-section",
           start: "top top",
           end: "bottom bottom",
           scrub: true
         }
       });
-    }, sectionRef);
+    }, []);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div className="parallax-section" ref={sectionRef}>
+    <div className="parallax-section">
       <h1>GSAP Parallax</h1>
 
       <div className="parallax-background" ref={backRef}>
