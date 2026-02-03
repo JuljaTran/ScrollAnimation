@@ -1,4 +1,6 @@
 import './App.css'
+import { useEffect } from 'react';
+import { startAutoScroll, stopAutoScroll } from './autoScroll.js';
 import TestLayout from './scenarios/TestLayout.jsx';
 import ScrollProgressCSS from './scenarios/css/01_ScrollProgress.jsx';
 import ScrollProgressGSAP from './scenarios/gsap/01_ScrollProgress.jsx';
@@ -16,7 +18,12 @@ import LongPageCSS from './scenarios/css/05_LongPage.jsx';
 import LongPageGSAP from './scenarios/gsap/05_LongPage.jsx';
 
 function App() {
-  const method = 'GSAP'; // 'CSS' or 'GSAP'
+  const method = 'CSS'; // 'CSS' or 'GSAP'
+  useEffect(() => {
+    startAutoScroll(1)
+
+    return () => stopAutoScroll()
+  }, [])
   return (     
   <TestLayout>
         {/*method === 'CSS' && <ScrollProgressCSS />}

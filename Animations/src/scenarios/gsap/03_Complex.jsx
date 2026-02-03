@@ -8,6 +8,7 @@ import testImage2 from "../../images/StreetFood01.jpg"
 import testImage3 from "../../images/StreetFood02.jpg"
 
 gsap.registerPlugin(ScrollTrigger);
+
 export default function ComplexGSAP() {
   const containerRef = useRef(null);
   const panelOneRef = useRef(null);
@@ -20,7 +21,8 @@ export default function ComplexGSAP() {
       { ref: panelTwoRef, start: "50% top", end: "100% top" },
       { ref: panelThreeRef, start: "100% top", end: "150% top" },
     ];
-
+// Panels erscheinen und verschwinden innerhalb des Containers
+// Die Start- und Endpositionen werden pro Panel berechnet, um die Sequenz zu steuern
     panels.forEach((panel, i) => {
       gsap.to(panel, {
         opacity: 1,
