@@ -5,7 +5,7 @@ export default function PinningCSS() {
     return (
         <div className="pin-section">
             <div className="pin-layout">
-                <div className="pin-visual-container">
+                <div className="pin-visual">
                     <img src={testImage1} alt="Feature visual" />
                 </div>
 

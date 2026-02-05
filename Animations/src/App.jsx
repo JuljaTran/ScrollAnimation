@@ -14,6 +14,9 @@ import ComplexGSAP from './scenarios/gsap/03_Complex.jsx';
 import PinningCSS from './scenarios/css/04_Pinning.jsx';
 import PinningGSAP from './scenarios/gsap/04_Pinning.jsx';
 
+import SimplePinningCSS from './scenarios/css/04_simplePinning.jsx';
+import SimplePinningGSAP from './scenarios/gsap/04_simplePinning.jsx';
+
 import LongPageCSS from './scenarios/css/05_LongPage.jsx';
 import LongPageGSAP from './scenarios/gsap/05_LongPage.jsx';
 
@@ -35,8 +38,11 @@ function App() {
         {/*{method === 'CSS' && <ComplexCSS />}
         {method === 'GSAP' && <ComplexGSAP />*/}
 
-        {method === 'CSS' && <PinningCSS />}
-        {method === 'GSAP' && <PinningGSAP />}
+        {/*method === 'CSS' && <PinningCSS />}
+        {method === 'GSAP' && <PinningGSAP />*/}
+
+        {method === 'CSS' && <SimplePinningCSS />}
+        {method === 'GSAP' && <SimplePinningGSAP />}
 
         {/*method === 'CSS' && <LongPageCSS />}
         {method === 'GSAP' && <LongPageGSAP />*/}

@@ -19,8 +19,7 @@ export default function LongPageCSS() {
             <div className="text">
               <h2>Section {index + 1}</h2>
               <p>
-                Beispielinhalt für eine scrollbasierte Storytelling-Sektion, wie sie
-                häufig auf umfangreichen Marketing- oder Produktseiten eingesetzt wird.
+                Beispielinhalt für eine lange Storytelling-Seite mit Bild- und Textkombinationen.
               </p>
             </div>
           </section>
