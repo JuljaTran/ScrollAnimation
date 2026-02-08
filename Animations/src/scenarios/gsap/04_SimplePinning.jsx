@@ -9,15 +9,15 @@ gsap.registerPlugin(ScrollTrigger);
 export default function PinningSimpleGSAP() {
 
     useEffect(() => {
-    const trigger = ScrollTrigger.create({
-        trigger: ".pin-section",
-        start: "top top",
-        end: "bottom bottom",
-        pin: ".pin-visual",
-        pinSpacing: true
-    });
-
-    return () => trigger.kill();
+        const trigger = ScrollTrigger.create({
+            trigger: ".pin-section",
+            start: "top top",
+            end: "bottom bottom",
+            pin: ".pin-visual",
+            pinSpacing: true
+       });
+       
+       return () => trigger.kill();
     }, []);
 
   return (
