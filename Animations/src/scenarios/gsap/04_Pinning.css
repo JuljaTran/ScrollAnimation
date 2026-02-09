@@ -15,7 +15,7 @@
 }
 
 .pin-visual-container {
-  width: 50%;
+  width: 100%;
   min-width: 0;
   display: flex;
   justify-content: center;

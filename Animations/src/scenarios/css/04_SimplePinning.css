@@ -9,9 +9,11 @@
 }
 
 .pin-visual {
+  width: 50%;
   position: sticky;
-  top: 20px;
-  height: fit-content;
+  top: 0; 
+  align-self: flex-start;
+  padding: 1rem;
 }
 
 .pin-visual img {
