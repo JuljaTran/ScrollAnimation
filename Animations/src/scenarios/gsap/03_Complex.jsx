@@ -1,8 +1,8 @@
-import "./03_Complex.css"
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import "./03_Complex.css"
 import testImage1 from "../../images/Street.jpg"
 import testImage2 from "../../images/StreetFood01.jpg"
 import testImage3 from "../../images/StreetFood02.jpg"
@@ -11,82 +11,46 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ComplexGSAP() {
   const containerRef = useRef(null);
-  const panelOneRef = useRef(null);
-  const panelTwoRef = useRef(null);
-  const panelThreeRef = useRef(null);
 
   useEffect(() => {
-    const panels = [
-      { ref: panelOneRef, start: "top top", end: "50% top" },
-      { ref: panelTwoRef, start: "50% top", end: "100% top" },
-      { ref: panelThreeRef, start: "100% top", end: "150% top" },
-    ];
-// Panels erscheinen und verschwinden innerhalb des Containers
-// Die Start- und Endpositionen werden pro Panel berechnet, um die Sequenz zu steuern
-    panels.forEach((panel, i) => {
-      gsap.to(panel, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: `${i * 100}vh top`,
-          end: `${i * 100 + 100}vh top`,
-          scrub: true
-        }
-      });
-      gsap.to(panel, {
-        opacity: 0,
-        y: -80,
-        scale: 0.95,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: `${i * 100 + 50}vh top`,
-          end: `${i * 100 + 150}vh top`,
-          scrub: true
-        }
-      });
-    });
+    const panels = containerRef.current.querySelectorAll(".panel");
 
-
-    // Cleanup
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      }
+    })
+    .fromTo(panels[0], { opacity: 0, yPercent: -40, scale: 0.9 }, { opacity: 1, yPercent: -50, scale: 1, ease: "none" })
+    .to(panels[0], { opacity: 0, yPercent: -60, scale: 0.9, ease: "none" })
+    .fromTo(panels[1], { opacity: 0, yPercent: -40, scale: 0.9 }, { opacity: 1, yPercent: -50, scale: 1, ease: "none" })
+    .to(panels[1], { opacity: 0, yPercent: -60, scale: 0.9, ease: "none" })
+    .fromTo(panels[2], { opacity: 0, yPercent: -40, scale: 0.9 }, { opacity: 1, yPercent: -50, scale: 1, ease: "none" })
+    .to(panels[2], { opacity: 0, yPercent: -60, scale: 0.9, ease: "none" });
   }, []);
-
   return (
     <div className="complex-container" ref={containerRef}>
       <h1>GSAP Complex</h1>
-
-      <section className="panel panel-one" ref={panelOneRef}>
-        <div className="panel-text">Feature One</div>
+      <section className="panel">
+        <div className="panel-text">Feature One</div> 
         <div className="panel-media">
-          <img
-            src={testImage1}
-            alt="Test visual"
-            className="panel-image"
-          />
+          <img src={testImage1} alt="Test visual" className="panel-image" />
         </div>
       </section>
 
-      <section className="panel panel-two" ref={panelTwoRef}>
+      <section className="panel">
         <div className="panel-text">Feature Two</div>
         <div className="panel-media">
-          <img
-            src={testImage2}
-            alt="Test visual"
-            className="panel-image"
-          />
+          <img src={testImage2} alt="Test visual" className="panel-image" />
         </div>
       </section>
 
-      <section className="panel panel-three" ref={panelThreeRef}>
+      <section className="panel">
         <div className="panel-text">Feature Three</div>
         <div className="panel-media">
-          <img
-            src={testImage3}
-            alt="Test visual"
-            className="panel-image"
-          />
+          <img src={testImage3} alt="Test visual" className="panel-image" />
         </div>
       </section>
     </div>
