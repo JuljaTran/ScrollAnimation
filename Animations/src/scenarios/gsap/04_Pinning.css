@@ -9,6 +9,11 @@
   overflow: hidden; 
 }
 
+.pin-visual-wrapper {
+  width: 50%;
+  flex-shrink: 0;
+}
+
 .pin-visual-container {
   width: 50%;
   min-width: 0;

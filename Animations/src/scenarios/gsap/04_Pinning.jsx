@@ -14,7 +14,7 @@ export default function PinningGSAP() {
         const trigger = ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
-            end: "bottom bottom",
+            end: () => "+=" + sectionRef.current.scrollHeight,
             pin: visualContainerRef.current,
             pinSpacing: true,
             scrub: true
@@ -26,11 +26,14 @@ export default function PinningGSAP() {
     return (
         <div className="pin-section" ref={sectionRef}>
             <div className="pin-layout">
-                <div className="pin-visual-container" ref={visualContainerRef}>
-                    <img src={testImage1} alt="Feature visual" />
+                <div className="pin-visual-wrapper">
+                    <div className="pin-visual-container" ref={visualContainerRef}>
+                        <img src={testImage1} alt="Feature visual" />
+                    </div>
                 </div>
 
                 <div className="pin-content">
+                    <h1>GSAP Pinning</h1>
                     <section className="step">
                         <h2>Text One</h2>
                         <p>Kurze Beschreibung</p>

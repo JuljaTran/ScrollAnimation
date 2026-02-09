@@ -10,7 +10,7 @@ export default function PinningSimpleCSS() {
             </div>
 
             <div className="pin-content">
-                <h1>CSS Pinning</h1>
+                <h1>CSS Pinning Simple</h1>
                 <section className="step">
                 <h2>Text One</h2>
                 <p>Kurze Beschreibung</p>

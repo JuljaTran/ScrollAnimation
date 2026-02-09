@@ -28,7 +28,6 @@ export default function PinningSimpleGSAP() {
             </div>
 
             <div className="pin-content">
-                <h1>GSAP Pinning</h1>
                 <section className="step">
                 <h2>Text One</h2>
                 <p>Kurze Beschreibung</p>
