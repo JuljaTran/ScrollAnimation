@@ -1,17 +1,11 @@
+import { useEffect } from 'react';
+import { startAutoScroll, stopAutoScroll } from '../autoScroll.js';
 import '../styles/TestLayout.css';
-import { useEffect } from "react"
-import { startAutoScroll, stopAutoScroll } from "../autoScroll"
 export default function TestLayout({ children }) {
   useEffect(() => {
-    window.scrollTo(0, 0)
-
-    const timeout = setTimeout(() => {
-      startAutoScroll(1)
-    }, 1000)
-
+    startAutoScroll(1, 15000); // Startet Auto-Scroll mit 1px pro Frame für 15 Sekunden
     return () => {
-      clearTimeout(timeout)
-      stopAutoScroll()
+      stopAutoScroll(); // Stopp den Auto-Scroll, wenn die Komponente unmountet
     }
   }, [])
   return (
