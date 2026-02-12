@@ -21,14 +21,6 @@ GSAP (GreenSock Animation Platform) + ScrollTrigger
 CSS @keyframes und moderne Scroll-Timelines (animation-timeline)
 JavaScript für Automatisierung und dynamische Inhaltsgenerierung
 
-## Projektstruktur 
-/src
-    /images         # Implementierte Images der Testszenarien
-    /scennarios             # React-Komponenten für jedes Testszenario
-        /css                # CSS Szenarien & zugehörige Stylesheets
-        /gsap               # GSAP Szenarien & zugehörige Stylesheets
-index.html                  # Einstiegspunkt der App
-
 ##  Installation
 
 git clone https://github.com/JuljaTran/ScrollAnimation.git
