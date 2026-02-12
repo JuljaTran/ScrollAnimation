@@ -11,7 +11,7 @@ Implementierung sowohl mit CSS-Keyframes als auch GSAP/ScrollTrigger.
 Reproduzierbare Messungen durch automatisiertem Scrollmechanismus.
 
 Performance-Analyse über Chrome DevTools.
-[Performanceanalyse Datenauswertung](Animation\performanceAnalyse\BA_PerformanceAnalyse_TranJulia.pdf)
+[Performanceanalyse Datenauswertung](Animations\performanceAnalyse\BA_PerformanceAnalyse_TranJulia.pdf)
 
 ## Technologien 
 
@@ -26,12 +26,19 @@ CSS @keyframes und moderne Scroll-Timelines (animation-timeline)
 JavaScript für Automatisierung und dynamische Inhaltsgenerierung
 
 ## Projektstruktur 
+
 /src 
+
     /images         # Implementierte Images der Testszenarien 
+    
     /scennarios             # React-Komponenten für jedes Testszenario 
+    
         /css                # CSS Szenarien & zugehörige Stylesheets 
+        
         /gsap               # GSAP Szenarien & zugehörige Stylesheets 
+        
 index.html                  # Einstiegspunkt der App 
+
 
 ##  Installation
 
