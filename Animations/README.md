@@ -11,7 +11,7 @@ Implementierung sowohl mit CSS-Keyframes als auch GSAP/ScrollTrigger.
 Reproduzierbare Messungen durch automatisiertem Scrollmechanismus.
 
 Performance-Analyse über Chrome DevTools.
-[Performanceanalyse Datenauswertung](Animations/public/performanceAnalyse/BA_PerformanceAnalyse_TranJulia.pdf)
+[Performanceanalyse Datenauswertung](/public/performanceAnalyse/BA_PerformanceAnalyse_TranJulia.pdf)
 
 ## Technologien 
 
