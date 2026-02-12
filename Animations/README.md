@@ -2,9 +2,6 @@
 
 Dieses Projekt demonstriert verschiedene scrollbasierte Animationstechniken in modernen Webanwendungen. Ziel ist der Vergleich zwischen nativem CSS und JavaScript-basierten Animationen mit GSAP und dem ScrollTrigger-Plugin in einer React-Anwendung.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 ## Features
 
 Vergleichbare Testszenarien für Progress-Animation, Parallax-Effekte, komplexe Sequenzen, Pinning und lange Scrollseiten.
@@ -14,7 +11,7 @@ Implementierung sowohl mit CSS-Keyframes als auch GSAP/ScrollTrigger.
 Reproduzierbare Messungen durch automatisiertem Scrollmechanismus.
 
 Performance-Analyse über Chrome DevTools.
-[Performanceanalyse Datenauswertung](../performanceAnalyse/BA_PerformanceAnalyse_TranJulia.pdf)
+[Performanceanalyse Datenauswertung](Animations/public/performanceAnalyse/BA_PerformanceAnalyse_TranJulia.pdf)
 
 ## Technologien 
 
