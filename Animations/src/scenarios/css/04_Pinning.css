@@ -1,0 +1,36 @@
+.pin-section {
+  width: 100%;
+}
+
+.pin-layout {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.pin-visual {
+  width: 50%;
+  position: sticky;
+  top: 0; 
+  align-self: flex-start;
+  padding: 1rem;
+}
+
+.pin-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.pin-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}

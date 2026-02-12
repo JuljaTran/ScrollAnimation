@@ -1,0 +1,42 @@
+.pin-section {
+  width: 100%;
+}
+
+.pin-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.pin-visual-wrapper {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.pin-visual-container {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-visual-container img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.pin-content {
+  width: 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}

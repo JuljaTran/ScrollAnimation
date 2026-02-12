@@ -1,0 +1,30 @@
+.pin-section {
+  width: 100%;
+}
+
+.pin-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
+
+.pin-visual {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.pin-visual img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.pin-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  height: 100vh;
+  padding: 2rem;
+}
