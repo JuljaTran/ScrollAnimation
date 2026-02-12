@@ -5,22 +5,20 @@ import TestLayout from './scenarios/TestLayout.jsx';
 //import ParallaxCSS from './scenarios/css/02_Parallax.jsx';
 //import ComplexCSS from './scenarios/css/03_Complex.jsx';
 //import PinningCSS from './scenarios/css/04_Pinning.jsx';
-//import SimplePinningCSS from './scenarios/css/04_simplePinning.jsx';
 //import LongPageCSS from './scenarios/css/05_LongPage.jsx';
 
 
 //import ScrollProgressGSAP from './scenarios/gsap/01_ScrollProgress.jsx';
 //import ParallaxGSAP from './scenarios/gsap/02_Parallax.jsx';
-import ComplexGSAP from './scenarios/gsap/03_Complex.jsx';
+//import ComplexGSAP from './scenarios/gsap/03_Complex.jsx';
 //import PinningGSAP from './scenarios/gsap/04_Pinning.jsx';
-//import SimplePinningGSAP from './scenarios/gsap/04_simplePinning.jsx';
-//import LongPageGSAP from './scenarios/gsap/05_LongPage.jsx';
+import LongPageGSAP from './scenarios/gsap/05_LongPage.jsx';
 
 
 function App() {
   const method = 'GSAP'; // 'CSS' or 'GSAP'
   return (     
-  <TestLayout>
+    <TestLayout>
         {/*method === 'CSS' && <ScrollProgressCSS />*/}
         {/*method === 'GSAP' && <ScrollProgressGSAP />*/}
         
@@ -28,17 +26,14 @@ function App() {
         {/*method === 'GSAP' && <ParallaxGSAP />*/}
 
         {/*method === 'CSS' && <ComplexCSS />*/}
-        {method === 'GSAP' && <ComplexGSAP />}
+        {/*method === 'GSAP' && <ComplexGSAP />*/}
 
         {/*method === 'CSS' && <PinningCSS />*/}
         {/*method === 'GSAP' && <PinningGSAP />*/}
 
-        {/*method === 'CSS' && <SimplePinningCSS />*/}
-        {/*method === 'GSAP' && <SimplePinningGSAP />*/}
-
         {/*method === 'CSS' && <LongPageCSS />*/}
-        {/*method === 'GSAP' && <LongPageGSAP />*/}
-  </TestLayout>
+        {method === 'GSAP' && <LongPageGSAP />}
+    </TestLayout>
   )
 }
 

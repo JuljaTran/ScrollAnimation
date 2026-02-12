@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { startAutoScroll, stopAutoScroll } from '../autoScroll.js';
-import '../styles/TestLayout.css';
+import './TestLayout.css';
 export default function TestLayout({ children }) {
   useEffect(() => {
     startAutoScroll(1, 15000); // Startet Auto-Scroll mit 1px pro Frame für 15 Sekunden
